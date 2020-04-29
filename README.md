@@ -1,4 +1,4 @@
-# React Pipeline Image
+# Node Pipeline Image
 
 Docker image for running pipeline of Node Boilerplate project.
 
