@@ -6,7 +6,7 @@ Docker image for running pipeline of Node Boilerplate project.
 ## Installed softwares 
 
 - Yarn 1.22.4
-- MongoDB 4.2.6
+- AWS CLI
 
 
 ## How to use this image
@@ -14,13 +14,14 @@ Docker image for running pipeline of Node Boilerplate project.
 Refer it as a base image in `bitbucket-pipeline.yml`
 
 ```yml
+image: lamhq/node-pipeline:latest
+
 pipelines:
   custom:
     deploy-to-test:
       - step:
           name: Build and Deploy
           deployment: Test
-          image: lamhq/node-pipeline:latest
           script:
             - yarn install
             - yarn run deploy
